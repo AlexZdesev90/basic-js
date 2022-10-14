@@ -14,13 +14,13 @@ const { NotImplementedError } = require('../extensions/index.js');
  * 
  */
 function transform(arr ) {
-  if(res = []){
-    return [];
-}
   if(!Array.isArray(arr)){
     throw new Error("\'arr\' parameter must be an instance of the Array!")
   }
   let res = JSON.parse(JSON.stringify(arr))
+  if(res = []){
+    return [];
+}
     for(let i = 0; i < res.length; i++){
         if(res[i] === "--double-next"){
             res[i] = res[i+1];
