@@ -25,13 +25,20 @@ const { NotImplementedError } = require('../extensions/index.js');
  */
 function minesweeper(matrix) {
   // let n = [[],[],[]];
-  var n;
+  let n = [];
+  // n[0] = [];
+  // n[1] = [];
+  // n[2] = [];
     for (var i = 0; i < matrix.length; i++) {
       n[i] = []
     for (var k = 0; k < matrix[i].length; k++) {
 
     let count = 0;
-
+// console.log(matrix[i - 1][k - 1])
+// console.log(matrix[i - 1][k])
+// console.log( matrix[i - 1][k + 1])
+// console.log(matrix[i][k - 1])
+// console.log(matrix[i - 1][k - 1])
     if (  matrix[i - 1] &&   matrix[i - 1][k - 1]   ){
     count+=1}
     if (  matrix[i - 1] &&  matrix[i - 1][k]   ){
