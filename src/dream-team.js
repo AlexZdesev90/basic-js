@@ -14,15 +14,17 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  */
 function createDreamTeam(names){
+  
   if(!Array.isArray(names)){
     return false
   }
   let secretNameOfTeam = "";
+  // names = names.trim();
   for(let i = 0; i < names.length; i++){
       let currentNameOfArray = names[i];
 
       if(typeof currentNameOfArray === "string"){
-          secretNameOfTeam += currentNameOfArray.slice(0,1).toUpperCase();
+          secretNameOfTeam += currentNameOfArray.trim().slice(0,1).toUpperCase();
       }
   }
   // console.log(secretNameOfTeam)
