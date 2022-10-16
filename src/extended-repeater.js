@@ -19,7 +19,8 @@ function repeater( str, options ) {
   let {repeatTimes, separator, addition, additionRepeatTimes, additionSeparator} = options;
 
   addition = addition !== undefined ? addition : "";
-  // separator = separator !== undefined ? separator : "";
+  separator = separator !== undefined ? separator : "+";
+  additionSeparator = additionSeparator !== undefined ? additionSeparator : "|";
   // additionRepeatTimes = additionRepeatTimes !== undefined ? additionRepeatTimes : 0;
   // additionSeparator = additionSeparator !== undefined ? additionSeparator : "";
 
