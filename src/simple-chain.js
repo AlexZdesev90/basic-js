@@ -6,7 +6,6 @@ const { NotImplementedError } = require('../extensions/index.js');
  */
 const chainMaker = {
   res: [],
-    
 getLength() {
   return this.res.length;
 },
@@ -18,16 +17,17 @@ addLink(value){
   return this
 },
 removeLink( position ) {
-  pos = position - 1;//index
-if(pos === 0){
-  this.res.splice(pos, 1)
+  //position - 1;//index
+  let lengthRes = this.res.length;
+if(+position && position >= 1 && position <= lengthRes){
+    this.res.splice(position-1, 1)
+    return this
 }
+
 else{
-  res = []
-  throw new Error("You can't remove incorrect link!")
-}
-return this
-},
+  this.res = []
+  throw new Error("You can\'t remove incorrect link!")
+}},
 reverseChain() {
   this.res.reverse();
   // console.log(res)
