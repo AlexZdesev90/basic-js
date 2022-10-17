@@ -22,12 +22,19 @@ function repeater( str, options ) {
   separator = separator !== undefined ? separator : "+";
   additionSeparator = additionSeparator !== undefined ? additionSeparator : "|";
   // additionRepeatTimes = additionRepeatTimes !== undefined ? additionRepeatTimes : 0;
+  // repeatTimes = repeatTimes !== undefined ? repeatTimes : 0;
   // additionSeparator = additionSeparator !== undefined ? additionSeparator : "";
 
-  repeatTimes = repeatTimes !== undefined ? repeatTimes : 0;
-  
+  // repeatTimes = repeatTimes !== undefined ? repeatTimes : 0;
+
+
+
   return ((str +(addition + additionSeparator).repeat(additionRepeatTimes - 1) +(addition))+separator).repeat(repeatTimes).slice(0,`${-separator.length}`)
 }
+
+
+  // return ((str +(addition + additionSeparator).repeat(additionRepeatTimes - 1) +(addition))+separator).repeat(repeatTimes).slice(0,`${-separator.length}`)
+
 
 module.exports = {
   repeater
