@@ -10,6 +10,7 @@ getLength() {
   return this.res.length;
 },
 addLink(value){
+  value = `${value}`//if null => "null"
   if(!value){
   this.res.push("( )");
   }
